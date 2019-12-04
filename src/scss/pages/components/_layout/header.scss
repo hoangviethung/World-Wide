@@ -3,6 +3,66 @@ header {
 	background: #FFFFFF;
 	box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: .16);
 	padding   : 23.5px 0;
+	position  : relative;
+	z-index   : 200;
+
+	.button-mobile {
+		cursor     : pointer;
+		position   : relative;
+		align-self : center;
+		display    : inline-block;
+		flex       : 0 0 24px;
+		max-width  : 24px;
+		height     : 15px;
+		display    : none;
+		margin-left: auto;
+
+		.line {
+			position     : absolute;
+			content      : '';
+			width        : 100%;
+			height       : 2px;
+			background   : #000000;
+			top          : 1px;
+			border-radius: 10px;
+
+			&:after,
+			&:before {
+				position     : absolute;
+				content      : '';
+				width        : 100%;
+				height       : 2px;
+				background   : #000000;
+				border-radius: 10px;
+			}
+
+			&:after {
+				top: 6px;
+			}
+
+			&:before {
+				top       : 12px;
+				transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+		}
+
+		&.active {
+			.line {
+				transform       : translate3d(0, 6px, 0) rotate(135deg);
+				transition      : transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				transition-delay: 0.075s;
+
+				&:after {
+					opacity: 0;
+				}
+
+				&:before {
+					top      : -6px;
+					transform: translate3d(0, 6px, 0) rotate(90deg);
+				}
+			}
+		}
+	}
 
 	.list-nav {
 		display    : flex;
@@ -18,6 +78,50 @@ header {
 
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.button-mobile {
+			display: block;
+		}
+
+		.list-nav {
+			position      : absolute;
+			top           : 122px;
+			left          : -100%;
+			height        : 100vh;
+			width         : 70%;
+			background    : #4e2147;
+			align-items   : flex-start;
+			flex-direction: column;
+			padding       : 50px 15px 0;
+			transition    : .3s all ease-in-out;
+
+			.item-nav {
+				color        : #ffffff;
+				margin-bottom: 40px;
+			}
+
+			&.active {
+				left: 0;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		height: 93px;
+
+		.logo {
+			width: 35%;
+		}
+
+		.list-nav {
+			top: 93px;
+
+			.item-nav {
+				font-size: 14px;
 			}
 		}
 	}

@@ -5,9 +5,15 @@
 			.more-title
 				span WORLDWIDE HOSPITAL
 		.slider-before-after
-			figure
-				.block-image
-					.image
-						img.ofc(src="./assets/images/index/item-before-after.png", alt="", srcset="")
-				figcaption
-					p Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1;i<100;i++)
+						.swiper-slide
+							figure
+								.block-image
+									.image
+										img.ofc(src="./assets/images/index/item-before-after.png", alt="", srcset="")
+								figcaption
+									p Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+			.swiper-button-next
+			.swiper-button-prev

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="111" viewBox="0 0 111 111">
+  <defs>
+    <filter id="Ellipse_2" x="4" y="7" width="103" height="103" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-1628.598 -328)">
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="49" cy="49.5" rx="49" ry="49.5" transform="translate(1634.598 335)" fill="#f6871f" opacity="0.15"/>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1628.598 328)" fill="none" stroke="#f6871f" stroke-width="1" opacity="0.15">
+      <circle cx="55.5" cy="55.5" r="55.5" stroke="none"/>
+      <circle cx="55.5" cy="55.5" r="55" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1628.6, 328)" filter="url(#Ellipse_2)">
+      <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="42.5" cy="42.5" r="42.5" transform="translate(13 13)" fill="#f6871f"/>
+    </g>
+    <g id="noun_Phone_1249346" transform="translate(1661.425 361.375)">
+      <path id="Path_1" data-name="Path 1" d="M53.489,12.62l-9.325.124a3.332,3.332,0,0,0-3.25,3.226l-.224,9.083A3.232,3.232,0,0,0,41.8,27.59l4.607,3.958c-.867,3.25-11.8,14.185-15.158,15.123l-4.306-4.719A3.232,3.232,0,0,0,24.469,40.9l-8.729.26a3.338,3.338,0,0,0-3.25,3.262l.124,9.077a3.179,3.179,0,0,0,3.25,3.25h4.618c16.993-.26,36.1-21.823,36.227-36.239V15.87A3.256,3.256,0,0,0,53.489,12.62Zm1.492,7.851C54.9,27,50.539,35.511,43.638,42.725c-7.255,7.544-15.9,12.109-23.18,12.221H15.881a1.4,1.4,0,0,1-1.48-1.492l-.124-9.077a1.563,1.563,0,0,1,1.5-1.451l8.759-.224h.053a1.475,1.475,0,0,1,1.085.478l4.9,5.361h.407c3.875-.142,17.282-13.566,17.282-17.317v-.448l-5.308-4.518a1.469,1.469,0,0,1-.519-1.18l.224-9.107a1.563,1.563,0,0,1,1.492-1.48l9.337-.1a1.486,1.486,0,0,1,1.48,1.48Z" transform="translate(-12.49 -12.62)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

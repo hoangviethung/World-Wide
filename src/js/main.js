@@ -90,6 +90,36 @@ const SVG = () => {
 	});
 }
 
+// SHOW MENU IN MOBILE
+function showMenuMobile() {
+	$('.button-mobile').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).siblings('.list-nav').toggleClass('active');
+		$('body').toggleClass('disabled');
+		$('.overlay').toggleClass('active');
+	});
+
+	$('.overlay').click(function(e) {
+		e.preventDefault();
+		$(this).removeClass('active')
+		$('.list-nav').removeClass('active');
+		$('body').removeClass('disabled');
+		$('.button-mobile').toggleClass('active');
+	});
+}
+
+function sliderBeforeAfter() {
+	var swiper = new Swiper('.slider-before-after .swiper-container', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+}
+
 // CHẠY KHI DOCUMENT SẴN SÀNG
 document.addEventListener('DOMContentLoaded', () => {
 	// LOADING
@@ -98,6 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
 	// SVG CONTROL
 	SVG();
+	// SLIDER
+	sliderBeforeAfter();
+	showMenuMobile();
 });
 
 // CHẠY KHI WINDOWN SCROLL
