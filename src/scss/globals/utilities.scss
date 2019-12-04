@@ -10,6 +10,10 @@ body {
 	}
 }
 
+* {
+	scroll-behavior: smooth;
+}
+
 .overlay {
 	opacity       : 0;
 	visibility    : hidden;
@@ -37,12 +41,15 @@ body {
 	top     : 535px;
 	z-index : 100;
 
+
+
 	@media (max-width: 1024.98px) {
 		display: none;
 	}
 }
 
 #button-to-top {
+	cursor  : pointer;
 	position: absolute;
 	top     : -56px;
 	right   : 27px;

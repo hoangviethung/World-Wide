@@ -111,14 +111,27 @@ function showMenuMobile() {
 
 function sliderBeforeAfter() {
 	var swiper = new Swiper('.slider-before-after .swiper-container', {
+		speed: 1000,
 		slidesPerView: 1,
 		loop: true,
+		autoplay: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 	})
 }
+
+const clickGoTop = () => {
+	let goTopButton = document.getElementById('button-to-top')
+	goTopButton.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	})
+}
+
 
 // CHẠY KHI DOCUMENT SẴN SÀNG
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,6 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
 	// SVG CONTROL
 	SVG();
+	// GOT TO TOP
+	clickGoTop();
 	// SLIDER
 	sliderBeforeAfter();
 	showMenuMobile();
