@@ -122,6 +122,20 @@ function sliderBeforeAfter() {
 	})
 }
 
+function scrollMenu() {
+	$('.item-nav, footer .list-link .item').on('click', function() {
+		$('.list-nav').removeClass('active');
+		$('body').removeClass('disabled');
+		$('.button-mobile').toggleClass('active');
+		$('.overlay').toggleClass('active');
+
+		let url = $(this).attr('data-href');
+		$('html, body').animate({
+			scrollTop: $(url).offset().top - 150 // Means Less header height
+		}, 1000);
+	});
+}
+
 const clickGoTop = () => {
 	let goTopButton = document.getElementById('button-to-top')
 	goTopButton.addEventListener('click', () => {
@@ -131,7 +145,6 @@ const clickGoTop = () => {
 		})
 	})
 }
-
 
 // CHẠY KHI DOCUMENT SẴN SÀNG
 document.addEventListener('DOMContentLoaded', () => {
@@ -145,7 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	clickGoTop();
 	// SLIDER
 	sliderBeforeAfter();
+	// MEMU
 	showMenuMobile();
+	scrollMenu();
 });
 
 // CHẠY KHI WINDOWN SCROLL

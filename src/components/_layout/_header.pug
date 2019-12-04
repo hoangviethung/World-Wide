@@ -2,15 +2,12 @@ header
 	.container
 		.row.no-gutters
 			.logo
-				img(src="./assets/images/logo.png", alt="", srcset="")
+				a(href="/")
+					img(src="./assets/images/logo.png", alt="", srcset="")
 			.button-mobile
 				span.line
 			.list-nav
-				.item-nav
-					a(href="#index-2") nâng ngực 6.0
-				.item-nav
-					a(href="#index-3") chương trình khuyến mãi
-				.item-nav
-					a(href="#index-4") hình ảnh khách hàng
-				.item-nav
-					a(href="#index-5") cơ sở hạ tầng
+				.item-nav(data-href="#index-2") nâng ngực 6.0
+				.item-nav(data-href="#index-3") chương trình khuyến mãi
+				.item-nav(data-href="#index-4") hình ảnh khách hàng
+				.item-nav(data-href="#index-5") cơ sở hạ tầng
