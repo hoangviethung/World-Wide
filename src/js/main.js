@@ -146,19 +146,22 @@ const clickGoTop = () => {
 	})
 }
 
-function AjaxSurpriseForm() {
-	$('.block-subscribe #submit-form, .block-form-index-3 #submit-form').on('click', function() {
+function AjaxSubmitForm() {
+	$('.block-subscribe #submit-form, .block-form-index-3 #submit-form').on('click', function(e) {
+		e.preventDefault()
 		const url = $(this).attr('data-url');
 		const name = $(this).parents('.block-form').find("#name").val();
 		const phone = $(this).parents('.block-form').find("#phone").val();
 		const email = $(this).parents('.block-form').find("#email").val();
+		const recaptcha = $('#recaptcha').val();
 		$.ajax({
 			type: "POST",
 			url: url,
 			data: {
 				name: name,
 				phone: phone,
-				email: email
+				email: email,
+				recaptcha: recaptcha
 			},
 			error: function(error) {},
 			success: function(response) {}
@@ -181,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// MEMU
 	showMenuMobile();
 	scrollMenu();
-	AjaxSurpriseForm();
+	AjaxSubmitForm();
 });
 
 // CHẠY KHI WINDOWN SCROLL
