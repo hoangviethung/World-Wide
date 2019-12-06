@@ -164,7 +164,10 @@ function AjaxSubmitForm() {
 				recaptcha: recaptcha
 			},
 			error: function(error) {},
-			success: function(response) {}
+			success: function(response) {
+				alert(res.Message);
+				location.reload();
+			}
 		});
 	});
 }
