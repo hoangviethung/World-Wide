@@ -22,13 +22,12 @@ html(lang="en")
 			#js-page-verify(class=bodyClass hidden)
 		block footer
 			include _footer.pug
-		input#recaptcha(type="text" name="g-recaptcha-response" hidden)
 		#phone-fixed
 			a(href="#")
 				img.svg(src="./assets/images/icons/phone.svg", alt="")
 		.overlay
 		//- include scripts
-		//- script(type="text/javascript", src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3')
+		script(type="text/javascript", src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3')
 		block scripts
 		script(type="text/javascript", src="./js/core.min.js")
 		script(type="text/javascript", src="./js/main.min.js")

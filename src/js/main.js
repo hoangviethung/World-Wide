@@ -1,8 +1,4 @@
 // import here !!!
-import loading from './loading';
-import mapping from "./mapping";
-
-
 // Script Cho Tab
 class Tab {
 	selector;
@@ -137,23 +133,26 @@ function scrollMenu() {
 }
 
 const clickGoTop = () => {
-	let goTopButton = document.getElementById('button-to-top')
-	goTopButton.addEventListener('click', () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
+	let goTopButton = document.getElementById('button-to-top');
+	if (goTopButton) {
+		goTopButton.addEventListener('click', () => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
 		})
-	})
+	}
 }
 
+// window.location = "/";
 function AjaxSubmitForm() {
 	$('.block-subscribe #submit-form, .block-form-index-3 #submit-form').on('click', function(e) {
-		e.preventDefault()
+		e.preventDefault();
+		const urlThankYou = $('#url-thank-you').val();
 		const url = $(this).attr('data-url');
 		const name = $(this).parents('.block-form').find("#name").val();
 		const phone = $(this).parents('.block-form').find("#phone").val();
 		const email = $(this).parents('.block-form').find("#email").val();
-		const recaptcha = $('#recaptcha').val();
 		$.ajax({
 			type: "POST",
 			url: url,
@@ -161,16 +160,15 @@ function AjaxSubmitForm() {
 				name: name,
 				phone: phone,
 				email: email,
-				recaptcha: recaptcha
 			},
 			error: function(error) {},
 			success: function(response) {
-				alert(res.Message);
-				location.reload();
+				$('.error-404 .box-content figcaption h3').html(res.Message);
 			}
 		});
 	});
 }
+
 
 // CHẠY KHI DOCUMENT SẴN SÀNG
 document.addEventListener('DOMContentLoaded', () => {
