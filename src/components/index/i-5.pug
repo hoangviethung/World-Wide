@@ -5,12 +5,7 @@
 			.more-title
 				span WORLDWIDE HOSPITAL
 		.list-infrastructure
-			.item.wow.fadeInLeft(data-wow-delay=".2s")
-				figure
-					img(src="./assets/images/index/item-infrastructure-1.png", alt="", srcset="")
-			.item.wow.fadeInLeft(data-wow-delay=".4s")
-				figure
-					img(src="./assets/images/index/item-infrastructure-2.png", alt="", srcset="")
-			.item.wow.fadeInLeft(data-wow-delay=".6s")
-				figure
-					img(src="./assets/images/index/item-infrastructure-3.png", alt="", srcset="")
+			-for(i=1;i<5;i++)
+				.item.wow.fadeInLeft(data-wow-delay=".2s")
+					figure
+						img(src="./assets/images/index/item-infrastructure-"+i+".png", alt="", srcset="")

@@ -55,7 +55,17 @@ main {
 	}
 
 	@media (max-width: 1024.98px) {
-		display: none;
+		right: 0;
+
+		svg {
+			width: 70%;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		svg {
+			width: 50%;
+		}
 	}
 }
 
