@@ -148,7 +148,6 @@ const clickGoTop = () => {
 function AjaxSubmitForm() {
 	$('.block-subscribe #submit-form, .block-form-index-3 #submit-form').on('click', function(e) {
 		e.preventDefault();
-		const urlThankYou = $('#url-thank-you').val();
 		const url = $(this).attr('data-url');
 		const name = $(this).parents('.block-form').find("#name").val();
 		const phone = $(this).parents('.block-form').find("#phone").val();
@@ -163,8 +162,12 @@ function AjaxSubmitForm() {
 			},
 			error: function(error) {},
 			success: function(res) {
-				$('.error-404 .box-content figcaption h3').html(res.Message);
-				window.location = "/cam-on";
+				if (res.Code === 200) {
+					$('.error-404 .box-content figcaption h3').html(res.Message);
+					window.location = "/cam-on";
+				} else {
+					alert(res.Message)
+				}
 			}
 		});
 	});

@@ -34,12 +34,17 @@ body {
 }
 
 #phone-fixed {
-	position: fixed;
-	right   : 27px;
-	top     : 535px;
-	z-index : 100;
+	position  : fixed;
+	right     : 27px;
+	top       : 535px;
+	z-index   : 100;
+	text-align: center;
 
-
+	p {
+		font-size    : 24px;
+		font-weight  : 700;
+		margin-bottom: 10px;
+	}
 
 	@media (max-width: 1024.98px) {
 		display: none;
