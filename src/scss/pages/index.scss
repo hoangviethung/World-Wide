@@ -118,7 +118,7 @@
 				}
 
 				figcaption {
-					margin: 47px 60px 0;
+					margin: 25px;
 
 					p {
 						color      : #484848;
@@ -365,10 +365,11 @@
 				margin: 50px 135px 0;
 
 				p {
-					text-align: center;
-					font-style: italic;
-					color     : #484848;
-					font-size : 24px;
+					text-align   : center;
+					font-style   : italic;
+					color        : #484848;
+					font-size    : 24px;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -418,7 +419,8 @@
 			figure {
 				figcaption {
 					p {
-						font-size: 14px;
+						font-size    : 14px;
+						margin-bottom: 5px;
 					}
 				}
 			}
