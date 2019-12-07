@@ -379,7 +379,7 @@
 			width          : 51px;
 			height         : 95px;
 			background-size: cover;
-			top            : 40%;
+			top            : 380px;
 		}
 
 		.swiper-button-next {
@@ -390,6 +390,16 @@
 		.swiper-button-prev {
 			background-image: url(../assets/images/icons/prev.svg);
 			left            : -50px;
+		}
+	}
+
+	@media (max-width: 1440px) {
+		.slider-before-after {
+
+			.swiper-button-next,
+			.swiper-button-prev {
+				top: 240px;
+			}
 		}
 	}
 
