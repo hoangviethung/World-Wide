@@ -162,7 +162,7 @@ function AjaxSubmitForm() {
 				email: email,
 			},
 			error: function(error) {},
-			success: function(response) {
+			success: function(res) {
 				$('.error-404 .box-content figcaption h3').html(res.Message);
 				window.location = "/cam-on";
 			}
