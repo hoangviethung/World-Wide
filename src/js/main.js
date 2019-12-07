@@ -164,6 +164,7 @@ function AjaxSubmitForm() {
 			error: function(error) {},
 			success: function(response) {
 				$('.error-404 .box-content figcaption h3').html(res.Message);
+				window.location = "/cam-on";
 			}
 		});
 	});
