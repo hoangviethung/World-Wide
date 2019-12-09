@@ -62,10 +62,11 @@
 
 	figure {
 		position: relative;
-		height  : 840px;
-		overflow: hidden;
 
 		.box-img {
+			height  : 750px;
+			overflow: hidden;
+
 			img {
 				width: 100%;
 
@@ -149,7 +150,9 @@
 
 	@media (max-width: 1024.98px) {
 		figure {
-			height: auto;
+			.box-img {
+				height: auto;
+			}
 
 			figcaption {
 				left: 30px;
