@@ -423,19 +423,18 @@
 
 			.title-form {
 				text-align    : center;
-				font-size     : 32px;
+				font-size     : 26px;
 				font-weight   : 700;
 				color         : #E1E1E1;
-				padding-bottom: 27px;
+				padding-bottom: 20px;
 				border-bottom : 1px solid rgba($color: #E1E1E1, $alpha: .6);
 			}
 
 			.desc {
 				text-align   : center;
-				margin-top   : 35px;
+				margin-top   : 20px;
 				color        : #FFFFFF;
-				font-size    : 21px;
-				margin-bottom: 37px;
+				margin-bottom: 40px;
 			}
 
 			form {
@@ -510,13 +509,28 @@
 				padding: 15px;
 
 				.title-form {
-					font-size     : 18px;
+					font-size     : 16px;
 					padding-bottom: 10px;
 				}
 
 				.desc {
 					font-size: 13px;
 					margin   : 10px 0;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.block-form-index-3 {
+			.block-form {
+				.title-form {
+					font-size     : 11px;
+					padding-bottom: 10px;
+				}
+
+				.desc {
+					font-size: 11px;
 				}
 			}
 		}
