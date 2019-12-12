@@ -313,14 +313,15 @@
 	}
 
 	&:after {
-		content   : '';
-		position  : absolute;
-		width     : 100%;
-		height    : 50%;
-		top       : 0;
-		left      : 0;
-		background: #F9F9F9;
-		z-index   : -1;
+		content       : '';
+		position      : absolute;
+		width         : 100%;
+		height        : 50%;
+		top           : 0;
+		left          : 0;
+		background    : #F9F9F9;
+		z-index       : -1;
+		pointer-events: none;
 	}
 
 	@media (max-width: 1024.98px) {
@@ -621,13 +622,15 @@
 	}
 
 	&:after {
-		content   : '';
-		position  : absolute;
-		width     : 100%;
-		height    : 50%;
-		top       : 0;
-		left      : 0;
-		background: #F9F9F9;
+		content       : '';
+		position      : absolute;
+		width         : 100%;
+		height        : 50%;
+		top           : 0;
+		left          : 0;
+		background    : #F9F9F9;
+		z-index       : -1;
+		pointer-events: none;
 	}
 }
 
